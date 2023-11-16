@@ -31,12 +31,12 @@ public class UserController {
     }
 
     @GetMapping()
-    public ResponseEntity<List<User>> getAllUsers() {
+    public ResponseEntity<List<UserRequest>> getAllUsers() {
         return ResponseEntity.ok(service.getAllUsers());
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<User> getUserById(@PathVariable int id) throws UserNotFoundException {
+    public ResponseEntity<UserRequest> getUserById(@PathVariable int id) throws UserNotFoundException {
         return ResponseEntity.ok(service.getUser(id));
     }
 }

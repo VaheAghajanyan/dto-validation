@@ -12,7 +12,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor(staticName = "build")
+@AllArgsConstructor()
 @NoArgsConstructor
 public class UserRequest {
     @NotNull(message = "Username shouldn't be null")
